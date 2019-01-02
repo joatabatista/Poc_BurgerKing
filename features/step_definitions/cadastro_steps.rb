@@ -18,14 +18,5 @@ Quando("preencho os campos correpondentes na tela de cadastro") do
 end
 
 Quando("valido o cadastro") do
-
-end
-
-Quando("realizo uma compra pelo BK Express") do
-  @comprar = Comprar.new
-  @comprar.realizar_compra
-end
-
-Entao("Valido compra realizada com sucesso") do
-
+  @cadastro.valida_cadastro(@nome)
 end

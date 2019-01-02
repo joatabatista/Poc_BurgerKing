@@ -2,9 +2,10 @@ class Comprar <Appium::Driver
 
   # ================================= SCREEN ======================================
     def initialize
+      @clicar_menu = 'navigation_nav_menu'
       @clicar_banner_bkexpress = 'rellay_express'
       @btn_ok = 'btn_ok'
-      @selecionar_loja = '2'
+      @selecionar_loja = '//android.support.v7.widget.RecyclerView/android.widget.RelativeLayout[1]'
       @btn_proximo = 'PRÓXIMO'
       @card_viagem = 'takeout_select'
       @card_restaurante = 'store_select'
@@ -37,7 +38,6 @@ class Comprar <Appium::Driver
     # ================================ METODOS =====================================
     def realizar_compra
       self.campo_bkExpress
-      #self.campo_btn_ok
       self.campo_loja
       self.btn_proximo_passo
       self.selecionar_banner_viagem
@@ -51,7 +51,6 @@ class Comprar <Appium::Driver
       self.selecionar_cartao_visa
     end
 
-
     def campo_bkExpress
       find_element(:id, @clicar_banner_bkexpress).click
     end
@@ -61,7 +60,8 @@ class Comprar <Appium::Driver
     end
 
     def campo_loja
-      find_element(:text, @selecionar_loja).click
+      wait_for {find_element(:xpath, @selecionar_loja).displayed? }
+      find_element(:xpath, @selecionar_loja).click
     end
 
     def btn_proximo_passo
@@ -151,18 +151,22 @@ class Comprar <Appium::Driver
 
     def campo_validade_cartao
       find_element(:id, @preencher_validade).click
+      find_element(:id, @preencher_validade).send_keys("Joata")
     end
 
     def campo_cvv_cartao
       find_element(:id, @preencher_cvv).click
+      find_element(:id, @preencher_cvv).send_keys("Joata")
     end
 
     def campo_nome_cartao
       find_element(:id, @preencher_nome_cartao).click
+      find_element(:id, @preencher_nome_cartao).send_keys("Joata")
     end
 
     def campo_cpf_cartao
       find_element(:id, @preencher_cpf_cartao).click
+      find_element(:id, @preencher_cpf_cartao).send_keys("Joata")
     end
 
     def clicar_btn_cartao

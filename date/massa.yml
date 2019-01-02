@@ -1,6 +1,6 @@
 -
   nome: "Thiago Teixeira"
-  email: "rrsaopaulo.magalhaes@ymail.com"
+  email: "rrsaopaulo.magalhaes@ymail.com.br"
   cpf: "12363332687"
   cep: "06420260"
   resitencia: "59"
@@ -10,7 +10,7 @@
   repitaSenha: "123456"
 -
   nome: "Paulo Magalhaes"
-  email: "paulo.mmagalhaes@ymail.com"
+  email: "paulo.mmagalhaes@ymail.com.br"
   cpf: "35996024845"
   cep: "06420070"
   resitencia: "99"
@@ -20,7 +20,7 @@
   repitaSenha: "123456"
 -
   nome: "Pedro Pessoa"
-  email: "pedroo.lhaes@ymail.com"
+  email: "pedroo.lhaes@ymail.com.br"
   cpf: "43321662485"
   cep: "06455930"
   resitencia: "Masculino"
@@ -30,7 +30,7 @@
   repitaSenha: "123456"
 -
   nome: "Mario Fernanda"
-  email: "mario.ffernanda@yaman.com.br"
+  email: "mario.ffernanda@yaman.com"
   cpf: "22367858284"
   cep: "06445130"
   resitencia: "118"
@@ -40,7 +40,7 @@
   repitaSenha: "123456"
 -
   nome: "Jeremias Santos"
-  email: "jere.ssantos@yaman.com.br"
+  email: "jere.ssantos@yaman.com"
   cpf: "38363135453"
   cep: "06455040"
   resitencia: "08"
@@ -50,7 +50,7 @@
   repitaSenha: "123456"
 -
   nome: "Erike Ribeiro"
-  email: "erike.rribeiro@gmail.com"
+  email: "erike.rribeiro@gmail.com.br"
   cpf: "16130163282"
   cep: "06416260"
   resitencia: "02"

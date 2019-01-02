@@ -25,6 +25,8 @@ class Cadastro <Appium::Driver
     @clicar_aceite_termo = 'terms'
     @clicar_btn_cadastrar = 'confirm'
     @clicar_banner_bkexpress = 'rellay_express'
+    @btn_login_cadastro = 'login'
+    @usuario_logado = 'name_user'
     @exemplo = "//android.widget.Button[instance='1']"
   end
 
@@ -49,6 +51,19 @@ def preencher_cadastro(nome, email, cpf, cep, resitencia, telefone, nascimento, 
   self.campo_repita_senha(repitaSenha)
   self.campo_clicar_termo
   self.campo_clicar_btn_cadastrar
+end
+
+def cadastro(email, senha)
+  self.campo_clicar_menu
+  self.campo_login
+  self.campo_email(email)
+  self.campo_senha(senha)
+  self.clicar_btn_login_cadastro
+end
+
+def valida_cadastro(nome)
+  self.campo_clicar_menu
+  self.campo_nome_logado(nome)
 end
 
 
@@ -148,6 +163,17 @@ end
 
 def scroll_para_baixo
     2.times{ Appium::TouchAction.new.swipe(start_x: 0.5, start_y: 0.7, end_x: 0.6, end_y: 0.3, duration: 900).perform}
+end
+
+def clicar_btn_login_cadastro
+  find_element(:id, @btn_login_cadastro).click
+end
+
+def campo_nome_logado(nome)
+  binding.pry
+  if (find_element(:id, @usuario_logado).text.eql?nome == true)
+    fail(ArgumentError.new('Usuário em não conformidade com o cadastro'))
+  end
 end
 
 end
