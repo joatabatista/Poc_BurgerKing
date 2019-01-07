@@ -12,7 +12,7 @@ Quando("seleciono BK Express") do
 end
 
 Quando("realizo minha compra") do
-
+  @comprar.finalizar_compra
 end
 
 Entao("compra realizada com sucesso") do

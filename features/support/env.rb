@@ -7,6 +7,7 @@ require 'cucumber'
 
 # configuração YAML
 $lista_cadastro = YAML.load_file('./date/massa.yml')
+$lista_credito = YAML.load_file('./date/credito.yml')
 
 #METODO DO APPIUM PARA INICIAR
 def caps
